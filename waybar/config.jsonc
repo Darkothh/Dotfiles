@@ -1,0 +1,87 @@
+{
+  "layer": "top",
+  "modules-left": [ "custom/launcher","wlr/workspaces"],
+  "modules-center": [ "hyprland/window"],
+  "modules-right": [ "tray","custom/notification", "network","pulseaudio","clock","custom/power" ],
+  "custom/launcher":{
+    "tooltip": false,
+    "format": "",
+    "on-click": "rofi -show drun",
+    "on-click-right": "killall rofi"
+  },
+  "sway/language": {
+    "format": "{}"
+},
+  "custom/keyboardstate": {
+    "numlock": true,
+    "capslock": true,
+    "format": {
+      "numlock": "N {icon}",
+      "capslock": "C {icon}"                                                                                                                                                       
+    },
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+  "custom/power":{
+    "format": "襤",
+    "on-click": "bash ~/.config/waybar/scripts/pwr.sh"
+  },
+    "tray": {
+    "icon-size": 13,
+    "spacing": 13
+  },
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "NoOneDetected",
+    "format-disconnected": "睊 Disconnected",
+    "tooltip": false
+  },
+  "clock": {
+    "format": "  {:%I:%M} "
+  },
+  "custom/updates": {
+    "tooltip": false,
+    "format": "{}  ",
+    "exec-if": "exit 0",
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "on-click": "update-system"
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 40
+  },
+  "wlr/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "{icon}"
+  },
+  "pulseaudio": {
+    "tooltip":false,
+    "format": " {icon} {volume}%",
+    "format-muted": " ﱝ Muted ",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "scroll-step": 5,
+    "format-icons": {
+      "default": ["", "", ""]
+    }
+  }
+}

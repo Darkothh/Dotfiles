@@ -1,0 +1,93 @@
+* {
+    border: none;
+    font-family: mononoki Nerd Font;
+    font-size: 13px;
+    min-height: 0;
+}
+
+#custom-updates,#clock, #battery, #pulseaudio, #network, #workspaces, #clock, #custom-notification {
+  padding: 0 8px 0 8px;
+	margin: 5px 0px;
+}
+
+#custom-power, #custom-launcher {
+	padding: 0 15px 0 15px;
+  background: #161320;
+	font-size: 15px;
+}
+
+#custom-launcher {
+  color: #89DCEB;
+}
+
+#custom-power {
+  color: #eb6f92;
+}
+
+window#waybar {
+  background-color: #181825;
+    color: white;
+}
+
+tooltip {
+	background: #0f0f0f;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #262626;
+}
+
+#tray {
+  padding: 10px;
+}
+
+/* #workspaces { */
+/* } */
+
+
+#workspaces button {
+    padding: 5px 10px;
+    color: #cba6f7;
+}
+
+#workspaces button.urgent {
+    color: #0f0f0f;
+    background-color: #9ec3c4;
+}
+
+
+
+#custom-media {
+	color: #f9e2af;
+}
+
+#custom-notification {
+  color: #eb6f92;
+}
+#custom-notification.span {
+  color: green;
+}
+
+#custom-date {
+  color: #31748f;
+}
+
+#custom-updates {
+  padding: 3px;
+   color: #8CC458;
+}
+
+#custom-downloads {
+   color: #f6c177;
+}
+
+#clock {
+  color: #c4a7e7;
+}
+
+#network {
+	color: #fab387;
+}
+
+#pulseaudio {
+	color: #9ccfd8;
+}

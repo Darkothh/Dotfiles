@@ -1,34 +1,50 @@
 {
   "layer": "top",
-  "modules-left": [ "custom/launcher","wlr/workspaces"],
-  "modules-center": [ "hyprland/window"],
-  "modules-right": [ "tray","custom/notification", "network","pulseaudio","clock","custom/power" ],
-  "custom/launcher":{
+  "modules-left": [
+    "custom/launcher",
+    "wlr/workspaces"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "tray",
+    "custom/notification",
+    // "hyprland/language",
+    "network",
+    "pulseaudio",
+    "clock",
+    "custom/power"
+  ],
+  "custom/launcher": {
     "tooltip": false,
     "format": "",
     "on-click": "rofi -show drun",
     "on-click-right": "killall rofi"
   },
-  "sway/language": {
-    "format": "{}"
-},
+  "hyprland/language": {
+    "format": "{icon} {}",
+    "format-us": "US",
+    "format-latam": "ES",
+    "keyboard-name": "AT Translated Set 2 keyboard"
+  },
   "custom/keyboardstate": {
     "numlock": true,
     "capslock": true,
     "format": {
       "numlock": "N {icon}",
-      "capslock": "C {icon}"                                                                                                                                                       
+      "capslock": "C {icon}"
     },
     "format-icons": {
       "locked": "",
       "unlocked": ""
     }
   },
-  "custom/power":{
+  "custom/power": {
     "format": "襤",
     "on-click": "bash ~/.config/waybar/scripts/pwr.sh"
   },
-    "tray": {
+  "tray": {
     "icon-size": 13,
     "spacing": 13
   },
@@ -75,13 +91,17 @@
     "format": "{icon}"
   },
   "pulseaudio": {
-    "tooltip":false,
+    "tooltip": false,
     "format": " {icon} {volume}%",
     "format-muted": " ﱝ Muted ",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "scroll-step": 5,
     "format-icons": {
-      "default": ["", "", ""]
+      "default": [
+        "",
+        "",
+        ""
+      ]
     }
   }
 }

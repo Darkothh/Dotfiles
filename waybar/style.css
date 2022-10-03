@@ -5,7 +5,7 @@
     min-height: 0;
 }
 
-#custom-updates,#clock, #battery, #pulseaudio, #network, #workspaces, #clock, #custom-notification {
+#custom-updates,#clock, #battery, #window, #pulseaudio, #network, #workspaces, #clock, #custom-notification {
   padding: 0 8px 0 8px;
 	margin: 5px 0px;
 }
@@ -40,19 +40,30 @@ tooltip {
   padding: 10px;
 }
 
-/* #workspaces { */
-/* } */
+#workspaces button.urgent {
+  color: red;
+}
 
+#workspaces button.active {
+    color: #c49ec4;
+    /* background-color: #c49ec4; */
+    /* border-radius: 100px; */
+}
+
+/* #window { */
+/*   background-color: #c49ec4; */
+/*   border-radius: 100px; */
+/* } */
 
 #workspaces button {
     padding: 5px 10px;
     color: #cba6f7;
 }
 
-#workspaces button.urgent {
-    color: #0f0f0f;
-    background-color: #9ec3c4;
-}
+/* #workspaces button.urgent { */
+/*     color: #0f0f0f; */
+/*     background-color: #9ec3c4; */
+/* } */
 
 
 

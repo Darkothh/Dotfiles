@@ -109,7 +109,7 @@ return {
 		},
 		{ -- browser-like bindings for tabbing
 			key = "t",
-			mods = "CTRL",
+			mods = "CTRL|ALT",
 			action = wezterm.action({ SpawnTab = "DefaultDomain" }),
 		},
 		{

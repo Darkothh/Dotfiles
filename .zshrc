@@ -17,6 +17,7 @@ alias cdc='cd ~/.config/nvim'
 alias cat='/bin/bat'
 alias catn='/bin/cat'
 alias catnl='/bin/bat --paging=never'
+alias g='git'
 alias lg='lazygit'
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a'
@@ -24,6 +25,7 @@ alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias vim='nvim'
+alias HyprlandREC='.local/bin/wrappedHl'
 
 unsetopt BEEP
 stty stop undef
@@ -208,3 +210,4 @@ eval "$(starship init zsh)"
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # source /lfbundle/lfbundle.zshrc
 source /home/core/.config/lfbundle/lfbundle.zshrc
+source $HOME/.config/user-dirs.dirs

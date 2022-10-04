@@ -1,6 +1,6 @@
 
 format = "$directory$character"
-right_format = """$cmd_duration$git_branch$git_status"""
+right_format = """$cmd_duration$git_branch"""
 
 # Disable the blank line at the start of the prompt
 add_newline = false

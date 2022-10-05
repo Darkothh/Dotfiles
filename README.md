@@ -1,3 +1,2 @@
 
-# install missing fonts and emojis 
-> sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+> sudo pacman -S zscroll kitty noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra xdg-desktop-portal-gtk

@@ -24,6 +24,7 @@ alias la='lsd -a'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
+alias lst='lsd --tree'
 alias vim='nvim'
 alias HyprlandREC='.local/bin/wrappedHl'
 

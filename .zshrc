@@ -11,6 +11,7 @@ export STARSHIP_CONFIG="$HOME/.config/starship/dark/starship.toml" #DARK
 bindkey -v
 # Alias
 alias cdc='cd ~/.config/nvim'
+alias cdd='cd /home/core/Downloads/repos/Dotfiles/'
 alias cat='/bin/bat'
 alias lf='lf-ueberzug'
 alias catn='/bin/cat'

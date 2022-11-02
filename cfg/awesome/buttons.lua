@@ -12,10 +12,7 @@ buttons.with_icon = function(args)
   local icon_size = args.icon_size or 20
   local icon_margin = args.icon_margin or 4
   local onclick = args.onclick or function() end
-
-  -- if icon:sub(1, 1) ~= '/' then
-  --     icon = os.getenv("HOME") .. '/.config/awesome/assets/icons/' .. icon .. '.svg'
-  -- end
+  local open = args.open or false
 
   local result = wibox.widget {
     {

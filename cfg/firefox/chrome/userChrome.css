@@ -89,9 +89,10 @@ by Miguel Avila
 */
 
 /* Tabs elements  */
-.tab-close-button {
+/* .tab-close-button {
   display: none;
 }
+ */
 
 .tabbrowser-tab:not([pinned]) .tab-icon-image {
   display: none !important;
@@ -134,8 +135,8 @@ by Miguel Avila
 
 /* Url Bar  */
 #urlbar-input-container {
-  background-color: var(--sfsecondary) !important;
-  border: 1px solid rgba(0, 0, 0, 0) !important;
+  /*! background-color: var(--sfsecondary) !important; */
+  border: 1px solid rgba(255, 255, 255, 0) !important;
 }
 
 #urlbar-container {
@@ -161,7 +162,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 /* Toolbar  */
 #tracking-protection-icon-container,
 #urlbar-zoom-button,
-#star-button-box,
 #pageActionButton,
 #pageActionSeparator,
 #tabs-newtab-button,
@@ -177,9 +177,21 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   color: #dedede !important;
 }
 
+/* CUSTOMS */
+
+#star-button-box {
+  fill: none;
+}
+
+#urlbar-input-container {
+ border: 1px solid #ffffff !important;
+}
+
+/*  */
+
 /* Disable elements  */
 #context-navigation,
-#context-savepage,
+/* #context-savepage, */
 #context-pocket,
 #context-sendpagetodevice,
 #context-selectall,
@@ -187,8 +199,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #context-inspect-a11y,
 #context-sendlinktodevice,
 #context-openlinkinusercontext-menu,
-#context-bookmarklink,
-#context-savelink,
+/* #context-bookmarklink, */
+/* #context-savelink, */
 #context-savelinktopocket,
 #context-sendlinktodevice,
 /* #context-searchselect, */
@@ -197,7 +209,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   display: none !important;
 }
 
-/* #context_bookmarkTab, */
+#context_bookmarkTab,
 #alltabs-button,
 #context_moveTabOptions,
 #context_sendTabToDevice,

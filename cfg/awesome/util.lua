@@ -17,6 +17,7 @@ local util = {}
     local icon_color = args.color or '#ffffff'
     local icon_margin = args.margin or 4
     local onclick = args.command or function () end
+    local onopen = args.onopen or false
 
     local result = wibox.widget {
       {

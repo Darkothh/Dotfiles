@@ -1,4 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
+export ZK_NOTEBOOK_DIR="$HOME/.notes"
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR="nvim"
 export TERMINAL="kitty"
@@ -9,6 +10,7 @@ export STARSHIP_CONFIG="$HOME/.config/starship/dark/starship.toml" #DARK
 bindkey -v
 # Alias
 alias cdc='cd ~/.config/nvim'
+alias cdd='cd /home/core/Downloads/repos/Dotfiles/cfg/'
 alias cat='/bin/bat'
 alias lf='lf-ueberzug'
 alias catn='/bin/cat'

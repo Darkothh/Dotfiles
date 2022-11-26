@@ -2,10 +2,11 @@ local gears = require("gears")
 local awful = require("awful")
 local wibox = require("wibox")
 
+
 local function paddined_button(button, margins)
   margins = margins or {
-    top = 10,
-    bottom = 10,
+    top = 9,
+    bottom = 9,
     left = 4,
     right = 4
   }
@@ -39,19 +40,19 @@ client.connect_signal("request::titlebars", function(c)
       layout = wibox.layout.fixed.horizontal
     },
     { -- Middle
-      { -- Title
-        align  = "center",
-        widget = awful.titlebar.widget.titlewidget(c)
-      },
+      -- { -- Title
+      --   align  = "center",
+      --   widget = awful.titlebar.widget.titlewidget(c)
+      -- },
       buttons = buttons,
       layout  = wibox.layout.flex.horizontal
     },
     { -- Right
-      paddined_button(awful.titlebar.widget.minimizebutton(c)),
       paddined_button(awful.titlebar.widget.maximizedbutton(c)),
+      paddined_button(awful.titlebar.widget.floatingbutton(c)),
       paddined_button(awful.titlebar.widget.closebutton(c), {
-        top = 10,
-        bottom = 10,
+        top = 9,
+        bottom = 9,
         right = 13,
         left = 4,
       }),

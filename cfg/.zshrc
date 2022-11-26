@@ -4,6 +4,10 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR="nvim"
 export TERMINAL="kitty"
 
+if [ -d "$HOME/.local/bin" ] ; then
+  PATH="$HOME/.local/bin:$PATH"
+fi
+
 #STARSHIP THEME
 # export STARSHIP_CONFIG="$HOME/.config/starship/color/starship.toml" #COLORED 
 export STARSHIP_CONFIG="$HOME/.config/starship/dark/starship.toml" #DARK
@@ -42,6 +46,7 @@ zle -N zle-keymap-select
 plugins=( 
   zsh-autosuggestions
   zsh-syntax-highlighting
+  sudo
 )
 
 source /usr/share/nvm/init-nvm.sh
@@ -50,4 +55,13 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 function erase_history { local HISTSIZE=0; }
+
+#compdef please
+
+_please_completion() {
+  eval $(env _TYPER_COMPLETE_ARGS="${words[1,$CURRENT]}" _PLEASE_COMPLETE=complete_zsh please)
+}
+
+compdef _please_completion please
 erase_history
+please

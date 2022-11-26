@@ -7,7 +7,7 @@ function run {
     $@&
   fi
 }
-run nm-applet
+# run nm-applet
 run $HOME/.fehbg
 run picom --config=./picom/picom.conf -b
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

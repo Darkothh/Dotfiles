@@ -71,6 +71,7 @@ noto-fonts-emoji
 noto-fonts-extra
 rofi
 neovim
+unzip
 brillo
 git
 lsd
@@ -78,16 +79,16 @@ bat
 )
 for i in "${programs[@]}"; do
   if ! pacman -Qi "$i" &> /dev/null; then
-    printf "${RED}$i No esta instalado${RESET}\n"
-    printf "Instalar $i? [y=yes/N]\n"
-    read -rp $'Opcion: ' option
-    if [ "$option" = y ]; then
-      printf "Instalando $i\n"
-      paru -S "$i"
-      printf "${GREEN}Se instalo $i${RESET}\n"
-    else
-      printf "${RED}No se instalo $i${RESET}\n"
-    fi
+#    printf "${RED}$i No esta instalado${RESET}\n"
+#    printf "Instalar $i? [y=yes/N]\n"
+#    read -rp $'Opcion: ' option
+#    if [ "$option" = y ]; then
+#      printf "Instalando $i\n"
+      yay -S "$i" --noconfirm
+#      printf "${GREEN}Se instalo $i${RESET}\n"
+#    else
+#      printf "${RED}No se instalo $i${RESET}\n"
+#    fi
   else
     printf "${GREEN}$i instalado${RESET}\n"
     tput cuu1
@@ -165,12 +166,9 @@ if (( "$EUID" == 0 )); then
   fi
   printf "Verificando starship files\n"
   if [ ! -d "$HOME/.config/starship/" ]; then
-    printf "Creando directorio\n"
-    mkdir -p "$HOME/.config/starship/"
-    tput cuu1
-    tput el
+    REPO="/home/core/Downloads/repos/Dotfiles"
     printf "Moviendo archivos\n"
-    cp -r /home/core/Downloads/repos/Dotfiles/config/starship/ "$HOME/.config/"
+    ln -s $REPO/cfg/starship/root/starship "$HOME/.config/"
   fi
 fi
 printf "Instalando Oh my zsh \n"
@@ -255,7 +253,7 @@ java
 for i in "${programs[@]}"; do
   if ! command -v "$i" &> /dev/null; then
     echo "$i No esta instalado"
-    return
+    # return
   fi
 done
 if [ -d "$HOME"/.config/nvim ]; then

@@ -27,6 +27,7 @@ theme.black = '#151720'
 theme.black2 = '#0d0d0d'
 theme.dimblack = '#1a1c25'
 theme.light_black = '#262831'
+theme.white = '#ffffff'
 theme.grey = '#666891'
 theme.red = '#dd6777'
 theme.yellow = '#ecd3a0'
@@ -49,7 +50,7 @@ theme.systray_icon_spacing = 10
 theme.bg_systray    = theme.bg_normal
 
 -- foregrounds
-theme.fg_normal     = "#a5b6cf"
+theme.fg_normal     = "#ffffff"
 theme.fg_focus      = theme.fg_normal
 theme.fg_urgent     = theme.fg_normal
 theme.fg_minimize   = theme.fg_normal
@@ -75,12 +76,14 @@ theme.border_radius = dpi(10)
 
 -- taglist
 theme.taglist_bg_empty = "#00000000"
-theme.taglist_fg_occupied = theme.blue
 theme.taglist_bg_focus = "#00000000"
-theme.taglist_fg_focus = theme.red
 theme.taglist_bg_volatile = "#00000000"
 theme.taglist_bg_urgent = "#00000000"
-theme.taglist_shape_focus = gears.shape.rounded_bar
+
+theme.taglist_fg_occupied = theme.white
+theme.taglist_fg_empty = theme.light_black
+theme.taglist_fg_urgent = theme.red
+theme.taglist_fg_focus = theme.blue
 
 -- titlebar
 theme.titlebar_bg = theme.bg_contrast
@@ -90,6 +93,12 @@ theme.titlebar_fg = theme.fg_normal
 -- close
 theme.titlebar_close_button_normal = gears.color.recolor_image(titlebar_assets_path .. "circle.png", theme.dimblack)
 theme.titlebar_close_button_focus = gears.color.recolor_image(titlebar_assets_path .. "circle.png", theme.red)
+
+-- Floating 
+theme.titlebar_floating_button_normal_active = gears.color.recolor_image(titlebar_assets_path .. "circle.png", theme.dimblack)
+theme.titlebar_floating_button_normal_inactive = gears.color.recolor_image(titlebar_assets_path .. "circle.png", theme.dimblack)
+theme.titlebar_floating_button_focus_active = gears.color.recolor_image(titlebar_assets_path .. "circle.png", theme.green)
+theme.titlebar_floating_button_focus_inactive = gears.color.recolor_image(titlebar_assets_path .. "circle.png", theme.green)
 
 -- maximized
 theme.titlebar_maximized_button_normal_active = gears.color.recolor_image(titlebar_assets_path .. "circle.png", theme.dimblack)
@@ -118,6 +127,12 @@ theme.layout_cornernw = gears.color.recolor_image(themes_path.."default/layouts/
 theme.layout_cornerne = gears.color.recolor_image(themes_path.."default/layouts/cornernew.png", theme.fg_normal)
 theme.layout_cornersw = gears.color.recolor_image(themes_path.."default/layouts/cornersww.png", theme.fg_normal)
 theme.layout_cornerse = gears.color.recolor_image(themes_path.."default/layouts/cornersew.png", theme.fg_normal)
+
+theme.network_connected = ''
+theme.network_disconnected = '睊'
+
+-- icons 
+theme.hints_icon = gears.color.recolor_image(icons_path .. "hints.svg", theme.blue)
 
 -- tooltip
 theme.tooltip_bg = theme.bg_normal

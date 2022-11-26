@@ -8,6 +8,9 @@ local gfs = require("gears.filesystem")
 local assets_path = gfs.get_configuration_dir() .. "assets/"
 local icons_path = assets_path .. "icons/"
 
+
+local volume = require("ui.modules.volume.volume")
+
 awful.screen.connect_for_each_screen(function(s)
 
   -- Each screen has its own tag table.
@@ -157,6 +160,9 @@ awful.screen.connect_for_each_screen(function(s)
           },
           util.mkbutton{
             icon = 'tray/down',
+          },
+          volume{
+            widget_type = 'arc'
           },
           s.systray,
           s.mylayoutbox,

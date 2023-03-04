@@ -56,12 +56,4 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 function erase_history { local HISTSIZE=0; }
 
-#compdef please
-
-_please_completion() {
-  eval $(env _TYPER_COMPLETE_ARGS="${words[1,$CURRENT]}" _PLEASE_COMPLETE=complete_zsh please)
-}
-
-compdef _please_completion please
 erase_history
-please

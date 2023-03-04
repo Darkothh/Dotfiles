@@ -58,6 +58,7 @@ trash
 github-cli
 go
 jdk-openjdk
+kitty
 nvm
 lazygit
 zsh
@@ -139,7 +140,7 @@ if (( "$EUID" == 0 )); then
     tput cuu1
     tput el
     printf "Linkeando archivo zshrc... \n"
-    ln -s /home/core/.zshrc "$HOME"
+    ln -s /home/dark/.zshrc "$HOME"
     sleep 1
     tput cuu1
     tput el
@@ -158,7 +159,7 @@ if (( "$EUID" == 0 )); then
     tput cuu1
     tput el
     printf "Linkeando archivo zshrc... \n"
-    ln -s /home/core/.zshrc "$HOME"
+    ln -s /home/dark/.zshrc "$HOME"
     sleep 1
     tput cuu1
     tput el
@@ -166,7 +167,7 @@ if (( "$EUID" == 0 )); then
   fi
   printf "Verificando starship files\n"
   if [ ! -d "$HOME/.config/starship/" ]; then
-    REPO="/home/core/Downloads/repos/Dotfiles"
+    REPO="/home/dark/Downloads/repos/Dotfiles"
     printf "Moviendo archivos\n"
     ln -s $REPO/cfg/starship/root/starship "$HOME/.config/"
   fi

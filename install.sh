@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPO=$HOME/Downloads/repos/Dotfiles/cfg
-SCRIPTS_DIR=$HOME/Downloads/repos/Dotfiles/bin
+SCRIPTS_DIR=/home/dark/Downloads/repos/Dotfiles/bin
 CONF=$HOME/.config/
 
 carpetas() {

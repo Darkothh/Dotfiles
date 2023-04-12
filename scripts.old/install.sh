@@ -55,13 +55,17 @@ installprog() {
 printf "${BOLD}Comprobando instalaciones...${RESET}\n"
 programs=(
 trash
+xclip
 github-cli
 go
 jdk-openjdk
+feh
 kitty
 nvm
 lazygit
 zsh
+ripgrep
+tmux
 nemo
 lf
 ueberzug

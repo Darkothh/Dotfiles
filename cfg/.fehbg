@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg  $HOME/.config/wallpapers/OS/black-blue-space.jpg
+feh --no-fehbg --bg-fill --no-fehbg $HOME/.config/wallpapers/favs/black-blue-space.jpg

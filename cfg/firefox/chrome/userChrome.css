@@ -7,6 +7,7 @@
 └  └─┘┴ └─
 
 by Miguel Avila
+Editado por TroubleC0re
 
 */
 
@@ -96,7 +97,7 @@ by Miguel Avila
  */
 
 .tabbrowser-tab:not([pinned]) .tab-icon-image {
-  display: none !important;
+/*   display: none !important; */
 }
 
 #nav-bar:not([tabs-hidden='true']) {
@@ -154,7 +155,7 @@ by Miguel Avila
 
 /* Bookmarks bar  */
 .bookmark-item .toolbarbutton-icon {
-  display: none;
+/*   display: none; */
 }
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   min-width: 1.6em;

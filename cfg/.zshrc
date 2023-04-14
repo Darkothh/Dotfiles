@@ -32,6 +32,9 @@ alias v='nvim'
 unsetopt BEEP
 stty stop undef
 
+# Remove delay when entering normal mode (vi)
+KEYTIMEOUT=5
+
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
   if [[ $KEYMAP == vicmd ]] || [[ $1 = 'block' ]]; then
@@ -41,6 +44,9 @@ function zle-keymap-select {
   fi
 }
 zle -N zle-keymap-select
+
+# Start with beam shape cursor on zsh startup and after every command.
+zle-line-init() { zle-keymap-select 'beam'}
 
 
 plugins=( 
@@ -54,6 +60,6 @@ eval "$(starship init zsh)"
 source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-function erase_history { local HISTSIZE=0; }
+# function erase_history { local HISTSIZE=0; }
 
-erase_history
+# erase_history

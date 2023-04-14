@@ -6,7 +6,7 @@ local menubar = require("menubar")
 
 terminal = "kitty"
 terminalTmux = "kitty zsh -c tmux"
-browser = "firefox"
+browser = "google-chrome-stable"
 launcher = "rofi -show drun"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
@@ -62,7 +62,9 @@ globalkeys = gears.table.join(
   awful.key({ modkey, }, "Return", function() awful.spawn(terminalTmux) end,
     { description = "open a terminal", group = "launcher" }),
   awful.key({ modkey, "Shift" }, "f", function() awful.spawn(browser) end,
-    { description = "open a Firefox", group = "launcher" }),
+    { description = "open a Chrome", group = "launcher" }),
+  -- awful.key({ modkey, "Shift" }, "f", function() awful.spawn(browser) end,
+  --   { description = "open a Firefox", group = "launcher" }),
   awful.key({ modkey, "Shift" }, "d", function() awful.spawn("discord") end,
     { description = "open a Firefox", group = "launcher" }),
   awful.key({ modkey, }, "d", function() awful.spawn(launcher) end,

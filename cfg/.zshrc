@@ -28,9 +28,11 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias lst='lsd --tree'
 alias v='nvim'
+alias encrypt='ecryptfs-mount-private'
+alias decrypt='ecryptfs-umount-private'
 
 unsetopt BEEP
-stty stop undef
+# stty stop undef
 
 # Remove delay when entering normal mode (vi)
 KEYTIMEOUT=5
@@ -60,6 +62,3 @@ eval "$(starship init zsh)"
 source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# function erase_history { local HISTSIZE=0; }
-
-# erase_history
